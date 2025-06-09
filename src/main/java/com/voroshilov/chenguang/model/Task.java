@@ -1,11 +1,27 @@
 package com.voroshilov.chenguang.model;
 
-import org.hibernate.annotations.GenericGenerator;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode
+@Builder
 @Entity
 @Table(name = "tasks")
 public class Task {
@@ -31,44 +47,4 @@ public class Task {
     @JoinColumn(name = "time_id")
     private Time timeId;
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Time getTimeId(){
-        return timeId;
-    }
-
-    public void setTimeId(Time timeId){
-        this.timeId = timeId;
-    }
-
-    @Override
-    public String toString() {
-        return "Task {" +
-                "id = " + id +
-                ", name = '" + name + '\'' +
-                ", description = " + description +
-                "} ";
-    }
 }
