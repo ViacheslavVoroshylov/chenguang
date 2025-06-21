@@ -5,10 +5,8 @@ import java.util.List;
 
 public interface TaskService {
     Task create(Task task);
-    Task readById(int id);
+    Task readById(long id);
     Task update(Task task);
-    void delete(Task task);
+    void delete(long id);
     List<Task> getAll();
-
-    Task getByName(String name);
 }
