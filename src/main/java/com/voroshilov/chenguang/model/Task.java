@@ -1,5 +1,6 @@
 package com.voroshilov.chenguang.model;
 
+import jakarta.persistence.GenerationType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -14,7 +15,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
-import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -31,13 +31,8 @@ import jakarta.validation.constraints.Size;
 public class Task {
 
     @Id
-    @GeneratedValue(generator = "sequence-generator")
-    @SequenceGenerator(
-            name = "task-seq-gen",
-            sequenceName = "task_id_seq",
-            allocationSize = 1
-    )
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(nullable = false)
     @Size(max=255)

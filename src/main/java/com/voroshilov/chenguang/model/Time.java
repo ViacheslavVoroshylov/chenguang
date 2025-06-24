@@ -1,6 +1,7 @@
 package com.voroshilov.chenguang.model;
 
 
+import jakarta.persistence.GenerationType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -16,7 +17,6 @@ import java.time.LocalTime;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Pattern;
 
@@ -32,12 +32,7 @@ import jakarta.validation.constraints.Pattern;
 public class Time {
 
     @Id
-    @GeneratedValue(generator = "sequence-generator")
-    @SequenceGenerator(
-            name = "time-seq-gen",
-            sequenceName = "time_id_seq",
-            allocationSize = 1
-    )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @CreationTimestamp
