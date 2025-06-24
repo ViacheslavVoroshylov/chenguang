@@ -27,7 +27,7 @@ import javax.validation.constraints.Size;
 public class Task {
 
     @Id
-    @GeneratedValue(generator = "sequence-genetator")
+    @GeneratedValue(generator = "sequence-generator")
     @SequenceGenerator(
             name = "task-seq-gen",
             sequenceName = "task_id_seq",

@@ -23,7 +23,7 @@ import java.time.LocalTime;
 public class Time {
 
     @Id
-    @GeneratedValue(generator = "sequence-genetator")
+    @GeneratedValue(generator = "sequence-generator")
     @SequenceGenerator(
             name = "time-seq-gen",
             sequenceName = "time_id_seq",
