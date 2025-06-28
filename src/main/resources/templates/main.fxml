@@ -4,16 +4,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.voroshilov.chenguang.ui.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="635.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.voroshilov.chenguang.ui.MainController">
    <children>
-      <AnchorPane layoutX="-1.0" prefHeight="400.0" prefWidth="157.0" style="-fx-background-color: #9834;">
+      <AnchorPane layoutX="-1.0" style="-fx-background-color: #9834;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Text layoutX="43.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of tasks" />
-            <Button layoutX="46.0" layoutY="360.0" mnemonicParsing="false" text="New task" textOverrun="CLIP" />
-            <ListView fx:id="taskListView" layoutX="11.0" layoutY="86.0" prefHeight="200.0" prefWidth="136.0" />
+            <Button layoutX="46.0" layoutY="365.0" mnemonicParsing="false" text="New task" textOverrun="CLIP" AnchorPane.bottomAnchor="5.0" />
+            <ListView fx:id="taskListView" layoutX="4.0" layoutY="61.0" prefHeight="156.0" prefWidth="144.0" AnchorPane.bottomAnchor="36.0" AnchorPane.topAnchor="60.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="157.0" prefHeight="60.0" prefWidth="444.0" style="-fx-background-color: #139556;" />
-      <TextArea fx:id="taskDescriptionArea" layoutX="157.0" layoutY="60.0" prefHeight="340.0" prefWidth="444.0" />
+      <AnchorPane layoutX="157.0" prefHeight="62.0" prefWidth="478.0" style="-fx-background-color: #139556;" AnchorPane.leftAnchor="157.0" AnchorPane.rightAnchor="-0.39999999999997726" />
+      <TextArea fx:id="taskDescriptionArea" layoutX="157.0" layoutY="60.0" prefHeight="338.0" prefWidth="478.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="157.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
    </children>
 </AnchorPane>
