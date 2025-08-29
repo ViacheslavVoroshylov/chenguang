@@ -1,4 +1,4 @@
-package com.voroshilov.chenguang.ui;
+package com.voroshilov.chenguang.userInterfaceController;
 
 import com.voroshilov.chenguang.model.Task;
 import com.voroshilov.chenguang.service.TaskService;
