@@ -1,5 +1,7 @@
 package com.voroshilov.chenguang.userInterfaceController;
 
+import com.voroshilov.chenguang.constant.PathConstants;
+import com.voroshilov.chenguang.constant.TitleConstants;
 import com.voroshilov.chenguang.model.Task;
 import com.voroshilov.chenguang.service.TaskService;
 import javafx.collections.FXCollections;
@@ -67,7 +69,7 @@ public class MainPageController {
 
         goToFormCreateNewTask.setOnAction(event -> {
             try {
-                mainUserInterfaceController.swithToNewTaskPage(event);
+                mainUserInterfaceController.switchScene(event, TitleConstants.NEW_TASK_PAGE_TITLE, PathConstants.NEW_TASK_PAGE_PATH);
             } catch (IOException e) {
                 /* ToDo normal exception handler for this */
                 e.printStackTrace();

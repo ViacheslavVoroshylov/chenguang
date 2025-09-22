@@ -1,5 +1,7 @@
 package com.voroshilov.chenguang.userInterfaceController;
 
+import com.voroshilov.chenguang.constant.PathConstants;
+import com.voroshilov.chenguang.constant.TitleConstants;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -8,6 +10,7 @@ import javafx.stage.Stage;
 
 import javafx.event.ActionEvent;
 import java.io.IOException;
+import java.net.URL;
 
 public class MainUserInterfaceController {
 
@@ -15,21 +18,10 @@ public class MainUserInterfaceController {
     private Scene scene;
     private Parent root;
 
-    public void  swithToMainPage(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("/templates/mainPage.fxml"));
-
+    public void switchScene(ActionEvent event, String nameScene, String namePath) throws IOException {
+        root = FXMLLoader.load(getClass().getResource(namePath));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setTitle("Main page");
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void  swithToNewTaskPage(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("/templates/newTask.fxml"));
-
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setTitle("New Task");
+        stage.setTitle(nameScene);
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
